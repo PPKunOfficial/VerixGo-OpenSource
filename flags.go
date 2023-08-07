@@ -46,21 +46,8 @@ var (
 	log           = logrus.New()
 	vLocal        MPhone
 	FirstInstall  bool
-	fPath         = filePath{
-		// 数据库储存目录
-		// 储存在非data目录可能会权限不足
-		dbPath: "",
-		// 主板ID位置
-		boardIdPath: "",
-		// 芯片名字位置
-		chipNamePath: "",
-		// 程序解析的prop文件
-		// 用于读取机型与finger
-		propPath: "",
-		// 错误后输出日志的位置
-		logPath: "",
-	}
-	Prop map[string]string
+	fPath         filePath
+	Prop          map[string]string
 )
 
 type Panel struct {
